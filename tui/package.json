@@ -1,0 +1,27 @@
+{
+  "name": "deeptui",
+  "version": "0.1.0",
+  "description": "OpenTUI terminal UI for Python deepagents",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "deeptui": "src/index.tsx"
+  },
+  "scripts": {
+    "start": "bun run src/index.tsx",
+    "demo": "bun run src/index.tsx deeptui.demo_agent:build_agent",
+    "typecheck": "tsc --noEmit",
+    "test": "bun run --preload ./test/preload.ts test/headless.test.tsx"
+  },
+  "dependencies": {
+    "@opentui/core": "^0.6.6",
+    "@opentui/react": "^0.6.6",
+    "react": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "typescript": "latest"
+  }
+}

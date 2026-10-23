@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "deeptui"
+version = "0.1.0"
+description = "Python bridge for the OpenTUI deepagents terminal UI"
+requires-python = ">=3.10"
+dependencies = [
+  "deepagents",
+  "langgraph-checkpoint-sqlite",
+  "aiosqlite",
+]
+
+[project.scripts]
+deeptui-bridge = "deeptui.bridge:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/deeptui"]
